@@ -1,0 +1,22 @@
+platform :ios, '11.0'
+
+target 'POD_NAME_Example' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for POD_NAME_Example
+  
+  target 'POD_NAME' do
+    # Pods for POD_NAME
+  end
+
+  target 'POD_NAME_ExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'POD_NAME_ExampleUITests' do
+    # Pods for testing
+  end
+
+end
