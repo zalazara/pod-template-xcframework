@@ -39,7 +39,7 @@ target 'MyPod_Example' do
   use_frameworks!
 
   # Pods for MyPod_Example
-	pod 'Alamofire'
+  pod 'Alamofire'
   
   target 'MyPod' do
     # Pods for MyPod
