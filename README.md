@@ -13,13 +13,9 @@ There are two reasons for wanting to work on this template, making your own or i
 
 ## Add dependencies
 
-In this version you need to register dependencies in podspec and podfile in the Example app.
-
-
+In this version you need to register dependencies in podspec.
 
 Example :
-
-
 
 **MyPod.podspec**
 
@@ -27,49 +23,13 @@ Example :
 spec.dependency 'Alamofire' 
 ```
 
-
-
-**Podfile**
-
-```ruby
-platform :ios, '11.0'
-
-target 'MyPod_Example' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for MyPod_Example
-  pod 'Alamofire'
-  
-  target 'MyPod' do
-    # Pods for MyPod
-  end
-
-  target 'MyPod_ExampleTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'MyPod_ExampleUITests' do
-    # Pods for testing
-  end
-
-end
-```
-
-
-
 ## Generate XCFramework
 
 This is simple, run build.sh in your terminal. 
 
-
-
 ```bash
 sh build.sh
 ```
-
-
 
 This command will generate .xcframework and zipped xcframework file for distribution.
 

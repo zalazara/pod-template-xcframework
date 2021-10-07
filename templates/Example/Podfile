@@ -8,6 +8,22 @@ target 'POD_NAME_Example' do
   
   target 'POD_NAME' do
     # Pods for POD_NAME
+    
+    # Comment the next line if you don't want to use dynamic frameworks
+    use_frameworks!
+    # Pods for POD_NAME
+
+    # Automate dependencies from POD_NAME.podspec
+    lib_dependencies = JSON.parse(`pod ipc spec ../POD_NAME.podspec`)
+
+    if !lib_dependencies.nil?
+      lib_dependencies = HashWithIndifferentAccess.new(lib_dependencies["dependencies"])
+      lib_dependencies.each do | key , value |
+        if key != "VTiPhoneLibrary/vtiosui_interfaces"
+          pod key, value[0]
+        end
+      end
+    end
   end
 
   target 'POD_NAME_ExampleTests' do
